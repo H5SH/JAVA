@@ -31,7 +31,7 @@ class BankAccount{
         this.interestrate = interestrate;
     }
 
-    public int getInterest() {
+    public double getInterest() {
         return interest;
     }
 
