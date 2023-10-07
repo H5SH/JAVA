@@ -25,7 +25,7 @@ class GasMilage{
             System.out.println("Enter Gallons for trip " + (i + 1));
             gallons[i] = sc.nextInt();
             totalGallons += gallons[i];
-            System.out.println("trip " + (i + 1) + " Cost " + miles[i]/gallons[i] + "Miles per Gallons");
+            System.out.println("trip " + (i + 1) + " Cost " + miles[i]/gallons[i] + " Miles per Gallons");
         }
 
         System.out.println("Average of all Trips is " + (totalMiles/trips)/(totalGallons/trips));
