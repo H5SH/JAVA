@@ -21,28 +21,29 @@ class PalindromeNumber{
         return false;
     }
     public static void main(String argv[]){
-        Scanner sc = new Scanner(System.in);
-        int Number;
+        try (Scanner sc = new Scanner(System.in)) {
+            int Number;
 
-        while(true){
-            System.out.println("Enter number");
-            Number = sc.nextInt();
-            // if wrong input
-            if(Number < 10000){
-                System.out.println("Wrong Input, Must be 5 Characters");
-            }
-            //else check if palidrome
-            else if(palindrome(Number)){
-                // print palindrome
-                System.out.println("Number " + Number + " is a palindrome");
-                break;
-            }
-            else{
-                // print not palindrome
-                System.out.println("Number " + Number + " is not a palindrome");
-                break;
-            }
+            while(true){
+                System.out.println("Enter number");
+                Number = sc.nextInt();
+                // if wrong input
+                if(Number < 10000){
+                    System.out.println("Wrong Input, Must be 5 Characters");
+                }
+                //else check if palidrome
+                else if(palindrome(Number)){
+                    // print palindrome
+                    System.out.println("Number " + Number + " is a palindrome");
+                    break;
+                }
+                else{
+                    // print not palindrome
+                    System.out.println("Number " + Number + " is not a palindrome");
+                    break;
+                }
 
-    }
+   }
+        }
     }
 }

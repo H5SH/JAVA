@@ -32,24 +32,25 @@ class BinaryToDecimal{
         
     }
     public static void main(String argv[]){
-        Scanner sc = new Scanner(System.in);
-        // take binary input og 4 char
-        System.out.println("Enter binary numbers consisting of 4 bits");
-        int binary = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            // take binary input og 4 char
+            System.out.println("Enter binary numbers consisting of 4 bits");
+            int binary = sc.nextInt();
 
-        // return if the number is smaller then 1000
-        if(binary < 1000 || binary > 9999){
-            System.out.println("Input must be of 4 bits");
-        }
-        else{
-            // convert to decimal
-            int decimal = Decimal(binary);
-            if(decimal == -1){
-                System.out.println("Invalid Input");
+            // return if the number is smaller then 1000
+            if(binary < 1000 || binary > 9999){
+                System.out.println("Input must be of 4 bits");
             }
-            // if the number is not binary break
             else{
-                System.out.println("Decimal value of " + binary + " is " + decimal);
+                // convert to decimal
+                int decimal = Decimal(binary);
+                if(decimal == -1){
+                    System.out.println("Invalid Input");
+                }
+                // if the number is not binary break
+                else{
+                    System.out.println("Decimal value of " + binary + " is " + decimal);
+                }
             }
         }
 

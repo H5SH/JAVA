@@ -36,65 +36,65 @@ class Factorial{
         System.out.println("Press 3 for mathemitical Contant e raise to power x"); 
 
         System.out.println("Enter your Choice");
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            // take option
+            int choice = sc.nextInt();
+            int number = 0;
 
-        // take option
-        int choice = sc.nextInt();
-        int number = 0;
+            // incase of factorial
+            if(choice == 1){
+                // take number for factorila
+                System.out.println("Enter the Number for Factorial");
+                number = sc.nextInt();
 
-        // incase of factorial
-        if(choice == 1){
-            // take number for factorila
-            System.out.println("Enter the Number for Factorial");
-            number = sc.nextInt();
+                // if the number is Nagetive the break
+                if(number < 0){
+                    System.out.println("Invalid Input");
+                }
+                else{
+                    // call factorial function and display asnwer
+                    System.out.println("The Factorial of " + number + " is " + Factorial(number));
+                }
+            }
 
-            // if the number is Nagetive the break
-            if(number < 0){
-                System.out.println("Invalid Input");
+            // incase of contant
+            else if(choice == 2){
+                // take number of iterations
+                System.out.println("Enter The Number of Iterations");
+                number = sc.nextInt();
+
+                // if the number is Nagetive the break
+                if(number <= 0){
+                    System.out.println("Invalid Input");
+                }
+                else{
+                    // call function and display answer
+                    System.out.println("Mathematical Constant With " + number + " iterations is " + MathContant(number));
+                }
+            }
+            
+            // incase of constant raise to the power x
+            else if(choice == 3){
+                // take number of iterations
+                System.out.println("Enter the number of iterations");
+                number = sc.nextInt();
+                // take value of x
+                System.out.println("Enter the Value of X");
+                int x = sc.nextInt();
+
+                // if the number is Nagetive the break
+                if(number <= 0 || x <= 0){
+                    System.out.println("Invalid Input");
+                }
+                else{
+                    // call function and display
+                    System.out.println("Mathematical Constant with " + number + " iterations and value of x = " + x + " is " + MathContantRaiseToX(number, x));
+                }
             }
             else{
-                // call factorial function and display asnwer
-                System.out.println("The Factorial of " + number + " is " + Factorial(number));
-            }
-        }
-
-        // incase of contant
-        else if(choice == 2){
-            // take number of iterations
-            System.out.println("Enter The Number of Iterations");
-            number = sc.nextInt();
-
-            // if the number is Nagetive the break
-            if(number <= 0){
+                // wrong input
                 System.out.println("Invalid Input");
             }
-            else{
-                // call function and display answer
-                System.out.println("Mathematical Constant With " + number + " iterations is " + MathContant(number));
-            }
-        }
-        
-        // incase of constant raise to the power x
-        else if(choice == 3){
-            // take number of iterations
-            System.out.println("Enter the number of iterations");
-            number = sc.nextInt();
-            // take value of x
-            System.out.println("Enter the Value of X");
-            int x = sc.nextInt();
-
-            // if the number is Nagetive the break
-            if(number <= 0 || x <= 0){
-                System.out.println("Invalid Input");
-            }
-            else{
-                // call function and display
-                System.out.println("Mathematical Constant with " + number + " iterations and value of x = " + x + " is " + MathContantRaiseToX(number, x));
-            }
-        }
-        else{
-            // wrong input
-            System.out.println("Invalid Input");
         }
 
     }
