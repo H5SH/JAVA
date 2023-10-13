@@ -58,16 +58,16 @@ class BankAccount{
 class lab4Task3{
     public static void main(String argv[]){
         BankAccount a = new BankAccount();
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter Starting period");
-        a.setStartingPeriod(sc.nextInt());
-        System.out.println("Enter Ending period");
-        a.setEndingPeriod(sc.nextInt());
-        System.out.println("Enter Current Account Balance");
-        a.setCurrentBalance(sc.nextInt());
-        System.out.println("Enter InterestRate");
-        a.setInterestrate(sc.nextInt());
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter Starting period");
+            a.setStartingPeriod(sc.nextInt());
+            System.out.println("Enter Ending period");
+            a.setEndingPeriod(sc.nextInt());
+            System.out.println("Enter Current Account Balance");
+            a.setCurrentBalance(sc.nextInt());
+            System.out.println("Enter InterestRate");
+            a.setInterestrate(sc.nextInt());
+        }
 
         a.CalculateTotalInterst();
         System.out.println("Interest according to " + a.getInterestrate() + " is " + a.getInterest());

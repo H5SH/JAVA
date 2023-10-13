@@ -14,18 +14,18 @@ class javaLab3{
         int [] arr, factorials;
         arr = new int [5];
         factorials = new int [5];
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Array Values");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter Array Values");
 
-        for (int i = 0; i < arr.length; i++)
-        {
-            arr[i]=sc.nextInt();
-            // System.out.println(arr[i]%2);
-            if(arr[i]%2 == 0){
-                factorials[i] = Factorials(arr[i]);
+            for (int i = 0; i < arr.length; i++)
+            {
+                arr[i]=sc.nextInt();
+                // System.out.println(arr[i]%2);
+                if(arr[i]%2 == 0){
+                    factorials[i] = Factorials(arr[i]);
+                }
             }
         }
-
         System.out.println("Array Values Are");
         for(int i = 0; i < arr.length; i++){
             System.out.println(factorials[i]);

@@ -19,7 +19,7 @@ class lab4Task2{
     public static void main(String argv[]){
         course a = new course("C++", "Rizwan", 4);
         course b = new course("Java", "Mustafa", 4); 
-        course c = new course("Average", "Hasham", (a.getcradit_hour() + b.getcradit_hour()/2));
+        new course("Average", "Hasham", (a.getcradit_hour() + b.getcradit_hour()/2));
 
         System.out.println(a.getcradit_hour());
     }

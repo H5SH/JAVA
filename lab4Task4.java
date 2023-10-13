@@ -2,19 +2,19 @@ class Function{
     private int num1, num2, num3, num4, num5;
     private static int Answer;
 
-    public static void Calculator(int num1, int num2){
+    public void Calculator(int num1, int num2){
         Answer = num1 + num2;
     }
 
-    public static void Calculator(int num1, int num2, int num3){
+    public void Calculator(int num1, int num2, int num3){
         Answer = num1 - num2 - num3;
     }
 
-    public static void Calculator(int num1, int num2, int num3, int num4){
+    public void Calculator(int num1, int num2, int num3, int num4){
         Answer = num1 * num2 * num3 * num4;
     }
 
-    public static void Calculator(int num1, int num2, int num3, int num4, int num5){
+    public void Calculator(int num1, int num2, int num3, int num4, int num5){
         Answer = (num1 + num2 + num3 + num4 + num5)/4;
     }
 

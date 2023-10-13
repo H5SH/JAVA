@@ -1,21 +1,19 @@
 import java.util.Scanner;
 
-class PalindromeNumber{
+class Q1A1{
 
     public static boolean palindrome(int number){
 
-        // Check if palindrome
-        // reverse number
-        int rev = 0;
-        int num = number;
+        int reverse = 0;
+        int original = number;
         
         while(number != 0) {
-            int rem = number % 10;
-            rev = rev * 10 + rem;
+            int remember = number % 10;
+            reverse = reverse * 10 + remember;
             number /= 10;
         }
-        // check if the reverse is equal to the original
-        if(num == rev){
+
+        if(original == reverse){
             return true;
         }
         return false;
@@ -27,18 +25,15 @@ class PalindromeNumber{
             while(true){
                 System.out.println("Enter number");
                 Number = sc.nextInt();
-                // if wrong input
-                if(Number < 10000){
-                    System.out.println("Wrong Input, Must be 5 Characters");
+                if(Number > 10000){
+                    System.out.println("Invalid Input");
                 }
-                //else check if palidrome
                 else if(palindrome(Number)){
-                    // print palindrome
                     System.out.println("Number " + Number + " is a palindrome");
                     break;
                 }
                 else{
-                    // print not palindrome
+
                     System.out.println("Number " + Number + " is not a palindrome");
                     break;
                 }
