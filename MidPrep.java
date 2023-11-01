@@ -74,7 +74,7 @@ public void setNumber(String number) {
     
 }
 
-class Test<T>{
+class Test<T> extends Student{
     T obj;
 
     public T getObj() {
@@ -87,15 +87,35 @@ class Test<T>{
 
 }
 
+interface hello{
+    public static void printHelloo(){
+        System.out.println("hello");
+    }
+}
+
+class Test2<T> implements hello{
+    T obj;
+    public void printHelloo(){
+        System.out.println("Hello world");
+    }
+}
+
 class MidPrep{
     public static void main(String argv[]){
     //    Test<Double> a = new Test<Double>();
     //    a.setObj(0.1);
     //   System.out.println(a.getObj());
+    //   a.setAge("23");
+    //   System.out.println(a.getAge());
 
-    int a = 10;
-    Integer b = Integer.valueOf(a);
-    System.out.println(b);
+    Test2<Integer> c = new Test2<Integer>();
+    c.printHelloo();
+      
+
+    // int a = 10;
+    // Integer b = Integer.valueOf(a);
+    // System.out.println(b);
+    
     
     }
 }
