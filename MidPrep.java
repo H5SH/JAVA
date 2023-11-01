@@ -53,10 +53,23 @@ public Student(String number) {
 
 
 
-public Student(int number1) {
+public Student(String number, int number1) {
+    this.number = number;
+    this.number1 = number1;
+}
 
 
-    
+
+public Student(String name, String age, String number, int number1) {
+    super(name, age);
+    this.number = number;
+    this.number1 = number1;
+}
+
+
+
+
+public Student(int number1) {    
     this.number1 = number1;
 }
 
@@ -108,9 +121,10 @@ class MidPrep{
     //   a.setAge("23");
     //   System.out.println(a.getAge());
 
-    Test2<Integer> c = new Test2<Integer>();
-    c.printHelloo();
-      
+    // Test2<Integer> c = new Test2<Integer>();
+    // c.printHelloo();
+    
+    Student s = new Student();
 
     // int a = 10;
     // Integer b = Integer.valueOf(a);
