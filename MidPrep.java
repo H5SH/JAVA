@@ -100,13 +100,20 @@ class Test<T> extends Student{
 
 }
 
-interface hello{
+class hello extends Person{
+    hello(String name, String age){
+        super(name, age);
+        System.out.println("Hello constructor");
+    }
+
     public static void printHelloo(){
         System.out.println("hello");
     }
+
+    
 }
 
-class Test2<T> implements hello{
+class Test2<T> {
     T obj;
     public void printHelloo(){
         System.out.println("Hello world");
@@ -125,6 +132,7 @@ class MidPrep{
     // c.printHelloo();
     
     Student s = new Student();
+    hello h = new hello("Hasham");
 
     // int a = 10;
     // Integer b = Integer.valueOf(a);
